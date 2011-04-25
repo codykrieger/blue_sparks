@@ -18,8 +18,7 @@ Include in your Gemfile:
 
     gem "bluesparks"
 
-For Rails versions prior to 3.0, use the rails2 branch of high_voltage:
-https://github.com/thoughtbot/high_voltage/tree/rails2    
+Sorry, folks, Rails 3 only.
 
 Usage
 -----
@@ -48,7 +47,7 @@ By default, the static page routes will be like /pages/:id (where :id is the vie
 
 If you want to route to a static page in another location (for example, a homepage), do this:
 
-    match 'pages/home' => 'high_voltage/pages#show', :id => 'home'
+    match 'pages/home' => 'bluesparks/pages#show', :id => 'home'
 
 In that case, you'd need an app/views/pages/home.html.erb file.
 
@@ -56,7 +55,7 @@ Generally speaking, you need to route to the 'show' action with an :id param of 
 
 You can route the root url to a high voltage page like this:
 
-    root :to => 'high_voltage/pages#show', :id => 'home'
+    root :to => 'bluesparks/pages#show', :id => 'home'
 
 Which will render a homepage from app/views/pages/home.html.erb
 
@@ -103,8 +102,8 @@ Just a suggestion, but you can test your pages using Shoulda pretty easily:
       tests PagesController
 
       %w(earn_money screencast about contact).each do |page|
-        context "on GET to /pages/#{page}" do
-          setup { get :show, :id => page }
+        context "on GET to /#{page}" do
+          setup { get :show, :slug => page }
 
           should_respond_with :success
           should_render_template page
@@ -112,7 +111,7 @@ Just a suggestion, but you can test your pages using Shoulda pretty easily:
       end
     end
 
-If you're not using a custom PagesController be sure to test <code>HighVoltage::PagesController</code> instead.
+If you're not using a custom PagesController be sure to test <code>BlueSparks::PagesController</code> instead.
 
 Enjoy!
 
@@ -120,14 +119,11 @@ Credits
 -------
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
-
-High Voltage is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
-
-Thank you to all [the contributors](https://github.com/thoughtbot/high_voltage/contributors)!
+for their awesome high_voltage gem.
 
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 License
 -------
 
-High Voltage is Copyright © 2009-2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
+BlueSparks is Copyright © 2011 Cody Krieger. It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
