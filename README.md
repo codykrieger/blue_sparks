@@ -119,6 +119,7 @@ Credits
 -------
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+
 for their awesome high_voltage gem.
 
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
