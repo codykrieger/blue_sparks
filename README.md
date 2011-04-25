@@ -78,7 +78,7 @@ Override the default route:
 
 Then modify it to subclass from High Voltage, adding whatever you need:
 
-    class PagesController < HighVoltage::PagesController
+    class PagesController < BlueSparks::PagesController
       before_filter :authenticate
       layout :layout_for_page
 

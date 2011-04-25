@@ -7,7 +7,7 @@ require "action_view/railtie"
 require "action_mailer/railtie"
 
 Bundler.require
-require "high_voltage"
+require "bluesparks"
 
 module Dummy
   class Application < Rails::Application

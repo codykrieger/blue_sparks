@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HighVoltage::PagesControllerTest < ActionController::TestCase
+class BlueSparks::PagesControllerTest < ActionController::TestCase
 
   context "on GET to /exists" do
     setup do
