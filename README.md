@@ -1,9 +1,8 @@
-High Voltage
+BlueSparks
 ============
 
-Rails engine for static pages.
-
-... but be careful. [Danger!](http://www.youtube.com/watch?v=HD5tnb2RBYg)
+Epic static page rendering controller with support for nested pages.
+Heavily inspired by [thoughtbot's high_voltage](/thoughtbot/high_voltage).
 
 Static pages?
 -------------
@@ -13,11 +12,11 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 Installation
 ------------
 
-    $ gem install high_voltage
+    % gem install bluesparks
 
 Include in your Gemfile:
 
-    gem "high_voltage"
+    gem "bluesparks"
 
 For Rails versions prior to 3.0, use the rails2 branch of high_voltage:
 https://github.com/thoughtbot/high_voltage/tree/rails2    
@@ -27,9 +26,10 @@ Usage
 
 Write your static pages and put them in the RAILS_ROOT/app/views/pages directory.
 
-    $ mkdir app/views/pages
-    $ touch app/views/pages/about.html.erb
+    % mkdir app/views/pages
+    % touch app/views/pages/about.html.erb
 
+<!--
 After putting something interesting there, you can link to it from anywhere in your app with:
 
     link_to "About", page_path("about")
@@ -37,6 +37,7 @@ After putting something interesting there, you can link to it from anywhere in y
 This will also work, if you like the more explicit style:
 
     link_to "About", page_path(:id => "about")
+-->
 
 Bam.
 
