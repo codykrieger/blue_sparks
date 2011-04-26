@@ -34,8 +34,9 @@ Here's the really cool part - _**you can nest pages**_.
     % touch app/views/pages/somefolder/index.html.erb
     % touch app/views/pages/somefolder/other.html.erb
 
-Now you'll be able to go to /somefolder and /somefolder/other. AWESOME,
-RIGHT?!
+Now you'll be able to go to /somefolder and /somefolder/other. You can
+even nest these babies as deep as you like. Have a hundred folder
+nesting if you want. AWESOME, RIGHT?!
 
 <!--
 After putting something interesting there, you can link to it from anywhere in your app with:
