@@ -28,6 +28,15 @@ Write your static pages and put them in the RAILS_ROOT/app/views/pages directory
     % mkdir app/views/pages
     % touch app/views/pages/about.html.erb
 
+Here's the really cool part - _**you can nest pages**_.
+
+    % mkdir app/views/pages/somefolder
+    % touch app/views/pages/somefolder/index.html.erb
+    % touch app/views/pages/somefolder/other.html.erb
+
+Now you'll be able to go to /somefolder and /somefolder/other. AWESOME,
+RIGHT?!
+
 <!--
 After putting something interesting there, you can link to it from anywhere in your app with:
 
@@ -37,8 +46,6 @@ This will also work, if you like the more explicit style:
 
     link_to "About", page_path(:id => "about")
 -->
-
-Bam.
 
 Routes
 ------
