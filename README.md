@@ -93,7 +93,7 @@ Create a PagesController of your own:
 Override the default route:
 
     # in config/routes.rb
-    resources :pages
+    match '/*slug' => 'pages#show'
 
 Then modify it to subclass from High Voltage, adding whatever you need:
 
