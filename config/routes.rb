@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  match '/*slug' => 'pages#show', :constraints => { :fullpath => /^\/(?!assets).+/ }
+  match '/*slug' => 'blue_sparks/pages#show', :constraints => { :fullpath => /^\/(?!assets).+/ }
 end

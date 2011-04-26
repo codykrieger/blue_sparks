@@ -12,11 +12,11 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 Installation
 ------------
 
-    % gem install bluesparks
+    % gem install blue_sparks
 
 Include in your Gemfile:
 
-    gem "bluesparks"
+    gem "blue_sparks"
 
 Sorry, folks, Rails 3 only.
 
@@ -47,7 +47,7 @@ By default, the static page routes will be like /pages/:id (where :id is the vie
 
 If you want to route to a static page in another location (for example, a homepage), do this:
 
-    match 'pages/home' => 'bluesparks/pages#show', :id => 'home'
+    match 'pages/home' => 'blue_sparks/pages#show', :id => 'home'
 
 In that case, you'd need an app/views/pages/home.html.erb file.
 
@@ -55,7 +55,7 @@ Generally speaking, you need to route to the 'show' action with an :id param of 
 
 You can route the root url to a high voltage page like this:
 
-    root :to => 'bluesparks/pages#show', :id => 'home'
+    root :to => 'blue_sparks/pages#show', :id => 'home'
 
 Which will render a homepage from app/views/pages/home.html.erb
 

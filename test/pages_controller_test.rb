@@ -1,10 +1,17 @@
 require 'test_helper'
+require File.expand_path('../../app/controllers/blue_sparks/pages_controller', __FILE__)
 
 class BlueSparks::PagesControllerTest < ActionController::TestCase
 
+  def setup
+    # @controller = BlueSparks::PagesController.new
+    # @request = ActionController::TestRequest.new
+    # @response = ActionController::TestResponse.new
+  end
+
   context "on GET to /exists" do
     setup do
-      get :show, :slug => 'exists'
+      get :show, :slug => "exists"
     end
 
     should respond_with(:success)
