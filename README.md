@@ -1,8 +1,19 @@
 BlueSparks
 ============
 
-Epic static page rendering controller with support for nested pages.
-Heavily inspired by [thoughtbot's high_voltage](/thoughtbot/high_voltage).
+Epic static page rendering controller with support for nested pages, and
+routes at the root. Heavily inspired by [thoughtbot's high_voltage](/thoughtbot/high_voltage).
+
+Routes at the root?
+-------------------
+
+Yeah, I'm talking about awesome routes like:
+
+    /mypage
+
+Instead of:
+
+    /pages/mypage
 
 Static pages?
 -------------
