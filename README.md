@@ -76,11 +76,11 @@ By default, the static page routes will be like /:slug (where :slug is the view 
 
 If you want to route to a static page in another location (for example, a homepage), do this:
 
-    match '/home' => 'blue_sparks/pages#show', :slug => 'home'
+    match '/my/crazy/page/of/doom' => 'blue_sparks/pages#show', :slug => 'mycrazypageofdoom'
 
-In that case, you'd need an app/views/pages/home.html.erb file.
+In that case, you'd need an app/views/pages/mycrazypageofdoom.html.erb file.
 
-Generally speaking, you need to route to the 'show' action with an :slug param of the view filename.
+Generally speaking, you need to route to the 'show' action with a :slug param of the view filename.
 
 You can route the root url to a high voltage page like this:
 
@@ -105,7 +105,7 @@ Override the default route:
     # in config/routes.rb
     match '/*slug' => 'pages#show'
 
-Then modify it to subclass from High Voltage, adding whatever you need:
+Then modify it to subclass from BlueSparks, adding whatever you need:
 
     class PagesController < BlueSparks::PagesController
       before_filter :authenticate
