@@ -88,7 +88,7 @@ Most common reasons to override?
 
 Create a PagesController of your own:
 
-    $ rails generate controller pages
+    % rails generate controller pages
 
 Override the default route:
 
