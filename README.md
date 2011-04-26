@@ -43,19 +43,19 @@ Bam.
 Routes
 ------
 
-By default, the static page routes will be like /pages/:id (where :id is the view filename).
+By default, the static page routes will be like /:slug (where :slug is the view filename).
 
 If you want to route to a static page in another location (for example, a homepage), do this:
 
-    match 'pages/home' => 'blue_sparks/pages#show', :id => 'home'
+    match '/home' => 'blue_sparks/pages#show', :slug => 'home'
 
 In that case, you'd need an app/views/pages/home.html.erb file.
 
-Generally speaking, you need to route to the 'show' action with an :id param of the view filename.
+Generally speaking, you need to route to the 'show' action with an :slug param of the view filename.
 
 You can route the root url to a high voltage page like this:
 
-    root :to => 'blue_sparks/pages#show', :id => 'home'
+    root :to => 'blue_sparks/pages#show', :slug => 'home'
 
 Which will render a homepage from app/views/pages/home.html.erb
 
@@ -84,7 +84,7 @@ Then modify it to subclass from High Voltage, adding whatever you need:
 
       protected
         def layout_for_page
-          case params[:id]
+          case params[:slug]
           when 'home'
             'home'
           else
