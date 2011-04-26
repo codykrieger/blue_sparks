@@ -4,6 +4,16 @@ BlueSparks
 Epic static page rendering controller with support for nested pages, and
 routes at the root. Heavily inspired by [thoughtbot's high_voltage](/thoughtbot/high_voltage).
 
+Downsides
+---------
+
+Downsides, you say? Yeah, unfortunately the only downside is that we
+have to use a wildcard route to accomplish the "routes at the root"
+thing. This means that requests that would normally result in a 404 get
+routed through BlueSparks::PagesController first. This shouldn't cause
+any major hiccups, though. If you're still interested, read on for great
+justice!!!
+
 Routes at the root?
 -------------------
 
