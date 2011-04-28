@@ -35,7 +35,7 @@ class BlueSparks::PagesController < ApplicationController
       end
     end
     logger.info "#{subnav}"
-    subnav.first unless subnav.nil?
+    subnav unless subnav.nil?
   end
 
 protected
