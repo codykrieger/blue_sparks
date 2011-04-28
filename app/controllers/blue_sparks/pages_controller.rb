@@ -34,8 +34,8 @@ class BlueSparks::PagesController < ApplicationController
         logger.info "subnav error: #{$!}"
       end
     end
-    logger.info "#{subnav}"
-    subnav unless subnav.nil?
+    logger.info "#{subnav.inspect}"
+    subnav.first unless subnav.nil?
   end
 
 protected
