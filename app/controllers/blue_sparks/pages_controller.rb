@@ -26,15 +26,15 @@ class BlueSparks::PagesController < ApplicationController
       subnav = render :partial => "#{current_page}/menu", :layout => "menu_template"
       subnav.first unless subnav.nil?
     rescue
-      logger.debug "subnav error: #{$!}"
+      logger.info "subnav error: #{$!}"
 
       begin
         subnav = render :partial => "#{page_root}/menu", :layout => "menu_template"
       rescue
-        logger.debug "subnav error: #{$!}"
+        logger.info "subnav error: #{$!}"
       end
     end
-    logger.debug "#{subnav}"
+    logger.info "#{subnav}"
     subnav.first unless subnav.nil?
   end
 
